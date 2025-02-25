@@ -9,6 +9,11 @@ import org.spockframework.runtime.model.SpecInfo;
 public class FlowDocsExtension implements IAnnotationDrivenExtension<FlowDocs> {
 
     @Override
+    public void visitSpec(SpecInfo spec) {
+        spec.addListener(new FlowDocsSpecListener());
+    }
+
+    @Override
     public void visitSpecAnnotation(FlowDocs annotation, SpecInfo spec) {
 
     }
