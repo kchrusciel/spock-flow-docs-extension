@@ -22,6 +22,7 @@ public class FlowDocsSpecListener extends AbstractRunListener {
 
     @Override
     public void afterSpec(SpecInfo specInfo) {
+        log.debug("FlowDocs extension was applied");
         if (errorInfo != null) {
             log.warn("FlowDocs generation is skipped. Spec failed.");
         }
